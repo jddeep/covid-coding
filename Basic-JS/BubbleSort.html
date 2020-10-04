@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <script>
+
+
+        function sort(arr) {
+
+            var len = arr.length,
+                i, j;
+
+            for (i = 0; i < len; i++) {
+                for (j = 0; j < len - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                }
+            }
+
+
+        }
+        function display(arr){
+            for (i = 0; i < arr.length; i++) {
+            document.write(arr[i] + ", ");
+        }
+
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        var arr = [40, 200, 1, 5, 25, 10];
+        
+        document.write("</br>Unsorted Array: ")
+        display(arr);
+
+        sort(arr);
+        document.write("</br></br>Sorted Array: ")
+        display(arr);
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+
+<html>
+
+    <head>
+        <script>
+    
+    
+            function sortedArray(ar) {
+    
+                var n = ar.length;
+    
+                for (var i = 0; i < n-1; i++) {
+                    var min_index = i;
+                    for (var j = i; j < n ; j++) {
+                        if (ar[j] < ar[min_index]) {
+                           min_index = j;
+                        }
+                    }
+                    var temp = ar[i];
+                    ar[i] = ar[min_index];
+                    ar[min_index] = temp;
+                }
+            }
+            function display(ar){
+                for (i = 0; i < ar.length; i++) {
+                document.write(ar[i] + " ");
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <script>
+            var ar = [9,1,0,6,-3,7];
+            
+            document.write("</br>Array before sorting: ")
+            display(ar);
+           
+            sortedArray(ar);
+            document.write("</br></br>Array after sorting: ")
+            display(ar);
+    
+        </script>
+    
+    
+    </body>
+    
+    </html> 

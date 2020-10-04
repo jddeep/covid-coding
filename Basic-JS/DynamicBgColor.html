@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function display(color){
+                document.body.style.backgroundColor=color;
+                
+            }
+        </script>
+
+    </head>
+    <body>
+        <center>
+            <form name="form1">
+                <b>Enter Color:</b><br>
+                <input type="text" name="text1"><br><br>
+                
+                <input type="button" name="button1" value="Click to Change Color" onclick="display(form1.text1.value)">
+
+            </form>
+        </center>
+    </body>
+</html>
